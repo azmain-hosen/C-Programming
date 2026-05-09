@@ -12,8 +12,6 @@ int main()
     scanf("%d", &num2);
 
     sum = num1 + num2;
-    printf("The sum is : %d\n", sum);
-
     average = (float)sum / 2; // type casting
     printf("The average is : %.1f\n", average);
 
