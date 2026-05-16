@@ -9,11 +9,11 @@ int main()
 
     if (age >= 18)
     {
-        printf("You are voting now\n");
+        printf("You vote now.\n");
     }
     else
     {
-        printf("You are under old\n");
+        printf("You are underage. You cannot vote now.\n");
     }
     
     return 0;
