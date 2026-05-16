@@ -17,22 +17,22 @@ int main()
     {
         if (x > z)
         {
-            printf("X is big number\n");
+            printf("\nX is big number\n");
         }
         else
         {
-            printf("Z is big number\n");
+            printf("\nZ is big number\n");
         }
     }
 
     else if (y > z)
     {
-        printf("Y is big number\n");
+        printf("\nY is big number\n");
     }
 
     else
     {
-        printf("Z is big number\n");
+        printf("\nZ is big number\n");
     }
 
     return 0;
