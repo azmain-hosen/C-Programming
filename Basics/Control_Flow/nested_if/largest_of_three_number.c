@@ -24,7 +24,6 @@ int main()
             printf("\nZ is big number\n");
         }
     }
-
     else if (y > z)
     {
         printf("\nY is big number\n");
