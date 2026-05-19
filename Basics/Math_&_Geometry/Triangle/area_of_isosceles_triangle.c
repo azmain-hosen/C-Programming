@@ -17,7 +17,7 @@ int main()
     S = (leant1 + leant2 + leant3) / 2.0;
     Area = sqrt(S*(S - leant1) * (S - leant2) * (S - leant3));
 
-    printf("The area is : %.2lf\n", Area);
+    printf("\nThe area is : %.2lf\n", Area);
 
     return 0;
 
