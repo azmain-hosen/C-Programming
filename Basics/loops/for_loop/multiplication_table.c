@@ -12,4 +12,5 @@ int main()
         printf("%d * %d = %d\n", num, i, num*i);
     }
     
+    return 0;
 }
