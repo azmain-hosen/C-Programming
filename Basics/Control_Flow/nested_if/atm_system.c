@@ -5,10 +5,8 @@ int main()
     int correct_pin = 123456;
     int entered_pin;
     int balance = 50000;
-
     printf("\nEnter your pin : ");
     scanf("%d", &entered_pin);
-
     if (correct_pin == entered_pin)
     {
         int i;
@@ -20,7 +18,6 @@ int main()
             printf("\n\nEnter your choice a option : ");
             int chose_option;
             scanf("%d", &chose_option);
-
             if (chose_option == 1)
             {
                 printf("\nYour balance is : %d TK\n", balance);
@@ -30,7 +27,6 @@ int main()
                 printf("\nEnter your amount of money : ");
                 int amount_money;
                 scanf("%d", &amount_money);
-
                 if (amount_money <= 20000)
                 {
                     printf("\nyour money is : %d TK\n", amount_money);
@@ -66,6 +62,5 @@ int main()
     {
         printf("\nYour pin is invalid\n");
     }
-
     return 0;
 }
