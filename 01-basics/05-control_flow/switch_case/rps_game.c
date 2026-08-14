@@ -88,4 +88,6 @@ int main()
         printf("\nPlayer 1 entered an invalid choice!\n");
         break;
     }
+
+    return 0;
 }
