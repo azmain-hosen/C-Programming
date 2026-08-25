@@ -48,11 +48,11 @@ The `05-type-practice` folder contains practical examples that combine the conce
 ```text
 02-variables-and-data-types/
 │
-├── 01-basic-data-types/
+├── 01-basic_data_types/
 ├── 02-variables/
-├── 03-type-modifiers/
-├── 04-type-ranges/
-├── 05-type-practice/
+├── 03-type_modifiers/
+├── 04-type_ranges/
+├── 05-type_practice/
 └── README.md
 ```
 
