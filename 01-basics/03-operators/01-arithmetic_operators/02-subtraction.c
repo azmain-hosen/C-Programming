@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-int main()
+int main(void)
 {
-    int num1, num2, subtract;
+    int num1, num2, difference;
 
     printf("Enter first number : ");
     scanf("%d", &num1);
@@ -10,8 +10,8 @@ int main()
     printf("Enter second number : ");
     scanf("%d", &num2);
 
-    subtract = num1 - num2;
-    printf("\nThe subtraction is : %d\n", subtract);
+    difference = num1 - num2;
+    printf("\nThe subtraction is : %d\n", difference);
 
     return 0;
 }

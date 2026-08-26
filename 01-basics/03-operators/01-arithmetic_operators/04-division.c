@@ -10,6 +10,12 @@ int main()
     printf("Enter second number : ");
     scanf("%lf", &num2);
 
+    if (num2 == 0)
+    {
+        printf("Error: Cannot divide by zero.\n");
+        return 1;
+    }
+
     division = num1 / num2;
     printf("\nThe division is : %.2lf\n", division);
 

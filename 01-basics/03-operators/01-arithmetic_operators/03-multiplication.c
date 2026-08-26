@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-int main()
+int main(void)
 {
-    int num1, num2, multiply;
+    int num1, num2, product;
 
     printf("Enter first number : ");
     scanf("%d", &num1);
@@ -10,8 +10,8 @@ int main()
     printf("Enter second number : ");
     scanf("%d", &num2);
 
-    multiply = num1 * num2;
-    printf("\nThe multiplication is : %d\n", multiply);
+    product = num1 * num2;
+    printf("\nThe multiplication is : %d\n", product);
 
     return 0;
 }
