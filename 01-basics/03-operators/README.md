@@ -236,14 +236,14 @@ These operators are frequently used in counters and loops.
 
 Bitwise operators work directly with the individual bits of integer values.
 
-| Operator | Name        |
-| -------- | ----------- | ---------- |
-| `&`      | Bitwise AND |
-| `        | `           | Bitwise OR |
-| `^`      | Bitwise XOR |
-| `~`      | Bitwise NOT |
-| `<<`     | Left Shift  |
-| `>>`     | Right Shift |
+| Operator | Name |
+|----------|------|
+| `&` | Bitwise AND |
+| `|` | Bitwise OR |
+| `^` | Bitwise XOR |
+| `~` | Bitwise NOT |
+| `<<` | Left Shift |
+| `>>` | Right Shift |
 
 Bitwise operations work with the binary representation of integer values.
 
