@@ -7,8 +7,7 @@ int main(void)
 
     int result = first_number ^ second_number;
 
-    printf("Bitwise XOR: %d ^ %d = %d\n",
-           first_number, second_number, result);
+    printf("Bitwise XOR: %d ^ %d = %d\n", first_number, second_number, result);
 
     return 0;
 }
