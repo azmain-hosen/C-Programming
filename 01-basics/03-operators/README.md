@@ -120,7 +120,7 @@ Logical operators are used to combine or reverse logical expressions.
 | Operator | Name | Example |
 |----------|------|---------|
 | `&&` | Logical AND | `a && b` |
-| `||` | Logical OR | `a || b` |
+| `\|\|` | Logical OR | `a \|\| b` |
 | `!` | Logical NOT | `!a` |
 
 ### Basic Logic
@@ -239,7 +239,7 @@ Bitwise operators work directly with the individual bits of integer values.
 | Operator | Name |
 |----------|------|
 | `&` | Bitwise AND |
-| `|` | Bitwise OR |
+| `\|` | Bitwise OR |
 | `^` | Bitwise XOR |
 | `~` | Bitwise NOT |
 | `<<` | Left Shift |
