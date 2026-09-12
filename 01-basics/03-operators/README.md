@@ -117,11 +117,11 @@ Relational operators become especially important when working with:
 
 Logical operators are used to combine or reverse logical expressions.
 
-| Operator | Name        | Example  |
-| -------- | ----------- | -------- | ---------- | --- | --- | --- |
-| `&&`     | Logical AND | `a && b` |
-| `        |             | `        | Logical OR | `a  |     | b`  |
-| `!`      | Logical NOT | `!a`     |
+| Operator | Name | Example |
+|----------|------|---------|
+| `&&` | Logical AND | `a && b` |
+| `||` | Logical OR | `a || b` |
+| `!` | Logical NOT | `!a` |
 
 ### Basic Logic
 
