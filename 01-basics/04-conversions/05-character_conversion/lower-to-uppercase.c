@@ -7,7 +7,7 @@ int main ()
     printf("Enter any lowercase character : ");
     scanf("%c", &lower_ch);
 
-    printf("The uppercase character : %c", lower_ch - 32);
+    printf("The uppercase character : %c\n", lower_ch - 32);
 
     return 0;
 }
