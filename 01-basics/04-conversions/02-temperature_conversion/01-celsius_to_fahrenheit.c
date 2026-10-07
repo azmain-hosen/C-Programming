@@ -1,15 +1,16 @@
 #include <stdio.h>
-#include <math.h>
 
-int main()
+int main(void)
 {
-    double Tc, Tf;
+    double celsius;
+    double fahrenheit;
 
-    printf("Enter temperature to Celsius scale : ");
-    scanf("%lf", &Tc);
+    printf("Enter temperature in Celsius: ");
+    scanf("%lf", &celsius);
 
-    Tf = (9.0 * Tc / 5.0) + 32;
-    printf("Fahrenheit scale temperature is : %lf\n", Tf);
+    fahrenheit = (9.0 * celsius / 5.0) + 32.0;
+
+    printf("Temperature in Fahrenheit: %.2f\n", fahrenheit);
 
     return 0;
 }
