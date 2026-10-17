@@ -1,13 +1,18 @@
 #include <stdio.h>
 
-int main()
+int main(void)
 {
     int number;
 
-    printf("Decimal number : ");
-    scanf("%d", &number);
+    printf("Decimal number: ");
 
-    printf("Octal number : %o\n", number);
+    if (scanf("%d", &number) != 1 || number < 0)
+    {
+        printf("Invalid input. Enter a non-negative integer.\n");
+        return 1;
+    }
+
+    printf("Octal number: %o\n", (unsigned int)number);
 
     return 0;
 }
