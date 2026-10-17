@@ -1,13 +1,18 @@
 #include <stdio.h>
 
-int main()
+int main(void)
 {
-    long long int number;
+    unsigned long long number;
 
-    printf("Octal number : ");
-    scanf("%llo", &number);
+    printf("Octal number: ");
 
-    printf("Decimal number : %lld\n", number);
+    if (scanf("%llo", &number) != 1)
+    {
+        printf("Invalid octal number.\n");
+        return 1;
+    }
+
+    printf("Decimal number: %llu\n", number);
 
     return 0;
 }
