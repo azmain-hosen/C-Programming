@@ -1,12 +1,18 @@
 #include <stdio.h>
 
-int main()
+int main(void)
 {
-    int number;
-    printf("Octal number : ");
-    scanf("%o", &number);
+    unsigned int number;
 
-    printf("Hexadecimal number : %x\n", number);
+    printf("Octal number: ");
+
+    if (scanf("%o", &number) != 1)
+    {
+        printf("Invalid octal number.\n");
+        return 1;
+    }
+
+    printf("Hexadecimal number: %X\n", number);
 
     return 0;
 }
