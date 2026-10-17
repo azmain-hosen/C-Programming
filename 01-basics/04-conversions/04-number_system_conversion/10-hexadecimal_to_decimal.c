@@ -1,12 +1,18 @@
 #include <stdio.h>
 
-int main()
+int main(void)
 {
-    int number;
-    printf("Hexadecimal number : ");
-    scanf("%x", &number);
+    unsigned int number;
 
-    printf("Decimal number : %d\n", number);
+    printf("Hexadecimal number: ");
+
+    if (scanf("%x", &number) != 1)
+    {
+        printf("Invalid hexadecimal number.\n");
+        return 1;
+    }
+
+    printf("Decimal number: %u\n", number);
 
     return 0;
 }
