@@ -1,12 +1,18 @@
 #include <stdio.h>
 
-int main()
+int main(void)
 {
-    double number;
-    printf("Decimal number : ");
-    scanf("%lf", &number);
+    int number;
 
-    printf("Hexadecimal number : %lx\n", (long)number);
+    printf("Decimal number: ");
+
+    if (scanf("%d", &number) != 1 || number < 0)
+    {
+        printf("Invalid input. Enter a non-negative integer.\n");
+        return 1;
+    }
+
+    printf("Hexadecimal number: %X\n", (unsigned int)number);
 
     return 0;
 }
