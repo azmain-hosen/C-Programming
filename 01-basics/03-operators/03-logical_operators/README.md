@@ -33,7 +33,7 @@ This section covers logical operators in C programming. These operators combine 
 | Operator | Name | Result |
 |---|---|---|
 | `&&` | Logical AND | True only when both operands are true |
-| `||` | Logical OR | True when at least one operand is true |
+| `\|\|` | Logical OR | True when at least one operand is true |
 | `!` | Logical NOT | Reverses the logical value |
 
 ## Truth Tables
