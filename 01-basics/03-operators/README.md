@@ -1,511 +1,134 @@
-# Operators
+# Operators in C
 
-Operators are symbols used in C programming to perform calculations, compare values, evaluate logical expressions, assign and modify values, manipulate individual bits, and inspect memory size.
+This section covers the major operators in C programming. Operators are symbols used to perform calculations, compare values, evaluate conditions, assign values, manipulate bits, and inspect the storage size of data types and objects.
 
-This section introduces the major operator categories used throughout C programming and builds a foundation for writing expressions, conditions, loops, functions, and more complex programs.
+## Topics Covered
 
----
+### 1. Arithmetic Operators
 
-## What You Will Learn
+**Folder:** `01-arithmetic_operators/`
 
-This section covers the following operator categories:
-
-1. Arithmetic Operators
-2. Relational Operators
-3. Logical Operators
-4. Assignment Operators
-5. Increment and Decrement Operators
-6. Bitwise Operators
-7. `sizeof` Operator
-
----
-
-## 1. Arithmetic Operators
-
-Arithmetic operators are used to perform mathematical calculations.
-
-| Operator | Name           | Example |
-| -------- | -------------- | ------- |
-| `+`      | Addition       | `a + b` |
-| `-`      | Subtraction    | `a - b` |
-| `*`      | Multiplication | `a * b` |
-| `/`      | Division       | `a / b` |
-| `%`      | Modulus        | `a % b` |
-
-### Topics Covered
-
-- Addition
-- Subtraction
-- Multiplication
-- Division
-- Modulus
-- Average calculation
+- Addition, subtraction, multiplication, division, and modulus
+- Average calculations
 - Arithmetic expressions
-- Operator precedence
-- Parentheses and evaluation order
+- Operator precedence and parentheses
 
-### Example
+### 2. Relational Operators
 
-```c
-int result = 10 + 5 * 2;
-```
+**Folder:** `02-relational_operators/`
 
-Multiplication has higher precedence than addition, so the expression is evaluated as:
+- Greater than (`>`)
+- Less than (`<`)
+- Greater than or equal to (`>=`)
+- Less than or equal to (`<=`)
+- Equal to (`==`)
+- Not equal to (`!=`)
 
-```text
-10 + (5 * 2)
-= 10 + 10
-= 20
-```
+### 3. Logical Operators
 
-Parentheses can be used to change the order of evaluation:
+**Folder:** `03-logical_operators/`
 
-```c
-int result = (10 + 5) * 2;
-```
+- Logical AND (`&&`)
+- Logical OR (`||`)
+- Logical NOT (`!`)
+- Combining conditions
+- Short-circuit evaluation
 
-Result:
+### 4. Assignment Operators
 
-```text
-30
-```
+**Folder:** `04-assignment_operators/`
 
----
+- Assignment (`=`)
+- Addition assignment (`+=`)
+- Subtraction assignment (`-=`)
+- Multiplication assignment (`*=`)
+- Division assignment (`/=`)
+- Modulus assignment (`%=`)
 
-## 2. Relational Operators
+### 5. Increment and Decrement Operators
 
-Relational operators are used to compare two values.
+**Folder:** `05-increment_decrement/`
 
-| Operator | Meaning                  | Example  |
-| -------- | ------------------------ | -------- |
-| `>`      | Greater than             | `a > b`  |
-| `<`      | Less than                | `a < b`  |
-| `>=`     | Greater than or equal to | `a >= b` |
-| `<=`     | Less than or equal to    | `a <= b` |
-| `==`     | Equal to                 | `a == b` |
-| `!=`     | Not equal to             | `a != b` |
+- Increment (`++`)
+- Decrement (`--`)
+- Prefix and postfix operations
 
-Relational expressions produce a logical result.
+### 6. Bitwise Operators
 
-In C:
+**Folder:** `06-bitwise_operators/`
 
-```text
-1 → true
-0 → false
-```
+- Bitwise AND (`&`)
+- Bitwise OR (`|`)
+- Bitwise XOR (`^`)
+- Bitwise NOT (`~`)
+- Left shift (`<<`)
+- Right shift (`>>`)
 
-### Example
+### 7. Sizeof Operator
 
-```c
-int age = 20;
-int result = age >= 18;
-```
+**Folder:** `07-sizeof_operator/`
 
-Since `20 >= 18` is true, `result` will contain `1`.
+- Using `sizeof` with variables and data types
+- Determining storage size in bytes
+- Using `%zu` to display the result
 
-Relational operators become especially important when working with:
+## Important Concepts
 
-- `if`
-- `else`
-- `while`
-- `for`
-- Conditional expressions
+### Operator Precedence
 
----
-
-## 3. Logical Operators
-
-Logical operators are used to combine or reverse logical expressions.
-
-| Operator | Name | Example |
-|----------|------|---------|
-| `&&` | Logical AND | `a && b` |
-| `\|\|` | Logical OR | `a \|\| b` |
-| `!` | Logical NOT | `!a` |
-
-### Basic Logic
-
-#### Logical AND (`&&`)
-
-Both expressions must be true.
-
-```text
-true && true   → true
-true && false  → false
-false && true  → false
-false && false → false
-```
-
-#### Logical OR (`||`)
-
-At least one expression must be true.
-
-```text
-true || true   → true
-true || false  → true
-false || true  → true
-false || false → false
-```
-
-#### Logical NOT (`!`)
-
-Reverses a logical result.
-
-```text
-!true  → false
-!false → true
-```
-
-Logical operators are commonly used to build more complex conditions.
-
----
-
-## 4. Assignment Operators
-
-Assignment operators are used to assign values to variables and update existing values.
-
-| Operator | Name                      | Equivalent  |
-| -------- | ------------------------- | ----------- |
-| `=`      | Assignment                | `a = 10`    |
-| `+=`     | Addition assignment       | `a = a + 5` |
-| `-=`     | Subtraction assignment    | `a = a - 5` |
-| `*=`     | Multiplication assignment | `a = a * 5` |
-| `/=`     | Division assignment       | `a = a / 5` |
-| `%=`     | Modulus assignment        | `a = a % 5` |
-
-### Example
+When an expression contains multiple operators, precedence rules determine which operations are grouped first. Parentheses can be used to make the intended grouping explicit.
 
 ```c
-int score = 50;
-
-score += 10;
+int result1 = 10 + 5 * 2;    // Result: 20
+int result2 = (10 + 5) * 2;  // Result: 30
 ```
 
-This is equivalent to:
+### Logical and Bitwise Operators
 
-```c
-score = score + 10;
-```
+Logical operators evaluate conditions and produce a result of `0` or `1`. Bitwise operators work on the individual bits of integer operands.
 
-The assignment operators provide a shorter way to update the value of an existing variable.
+For example, `&&` is logical AND, whereas `&` is bitwise AND.
 
----
+### The `sizeof` Operator
 
-## 5. Increment and Decrement Operators
-
-Increment and decrement operators modify a variable by exactly one.
-
-| Operator | Name      | Example   |
-| -------- | --------- | --------- |
-| `++`     | Increment | `count++` |
-| `--`     | Decrement | `count--` |
-
-### Increment Example
-
-```c
-int count = 5;
-
-count++;
-```
-
-Result:
-
-```text
-count = 6
-```
-
-### Decrement Example
-
-```c
-int count = 5;
-
-count--;
-```
-
-Result:
-
-```text
-count = 4
-```
-
-These operators are frequently used in counters and loops.
-
----
-
-## 6. Bitwise Operators
-
-Bitwise operators work directly with the individual bits of integer values.
-
-| Operator | Name |
-|----------|------|
-| `&` | Bitwise AND |
-| `\|` | Bitwise OR |
-| `^` | Bitwise XOR |
-| `~` | Bitwise NOT |
-| `<<` | Left Shift |
-| `>>` | Right Shift |
-
-Bitwise operations work with the binary representation of integer values.
-
-### Example: Bitwise AND
-
-```c
-int result = 5 & 3;
-```
-
-Binary representation:
-
-```text
-5 = 0101
-3 = 0011
-
-    0101
-  & 0011
-  ------
-    0001
-```
-
-Therefore:
-
-```text
-5 & 3 = 1
-```
-
-### Basic Bitwise Concepts
-
-```text
-&   → Bitwise AND
-|   → Bitwise OR
-^   → Bitwise XOR
-~   → Bitwise NOT
-<<  → Left Shift
->>  → Right Shift
-```
-
-Bitwise operators are especially useful in:
-
-- Low-level programming
-- Embedded systems
-- Hardware-related programming
-- Flags and masks
-- Bit manipulation
-- Binary data processing
-
----
-
-## 7. `sizeof` Operator
-
-The `sizeof` operator is used to determine the amount of memory occupied by a type or object, measured in bytes.
-
-### Example
-
-```c
-#include <stdio.h>
-
-int main(void)
-{
-    int age = 18;
-
-    printf("Size of age: %zu bytes\n", sizeof(age));
-
-    return 0;
-}
-```
-
-The result depends on the C implementation and platform.
-
-The `sizeof` operator is useful for:
-
-- Understanding data type sizes
-- Inspecting memory usage
-- Working with arrays
-- Understanding how C stores data
-- Writing portable C programs
-
----
-
-## Operator Precedence
-
-When an expression contains multiple operators, C follows precedence rules to determine which operators are evaluated first.
-
-A simplified precedence order for the arithmetic operators covered in this section is:
-
-```text
-()
-↓
-*  /  %
-↓
-+  -
-```
-
-For example:
-
-```c
-int result = 10 + 5 * 2;
-```
-
-is evaluated as:
-
-```text
-10 + (5 * 2)
-= 20
-```
-
-But:
-
-```c
-int result = (10 + 5) * 2;
-```
-
-is evaluated as:
-
-```text
-(10 + 5) * 2
-= 30
-```
-
-Parentheses can therefore be used to explicitly control the order of evaluation.
-
----
-
-## Learning Progression
-
-The operators in this section are organized from fundamental calculations to more advanced operations:
-
-```text
-Arithmetic
-    ↓
-Relational
-    ↓
-Logical
-    ↓
-Assignment
-    ↓
-Increment / Decrement
-    ↓
-Bitwise
-    ↓
-sizeof
-```
-
-This progression helps build a strong foundation before moving into conditional statements, loops, arrays, pointers, and more advanced C programming concepts.
-
----
-
-## Practical Application
-
-Operators are not isolated features. They are building blocks used throughout C programming.
-
-```text
-Arithmetic Operators
-        ↓
-Calculations
-
-Relational Operators
-        ↓
-Comparisons
-
-Logical Operators
-        ↓
-Complex Conditions
-
-Assignment Operators
-        ↓
-Updating Variables
-
-Increment / Decrement
-        ↓
-Counters and Loops
-
-Bitwise Operators
-        ↓
-Low-Level Bit Manipulation
-
-sizeof
-        ↓
-Memory and Data Type Analysis
-```
-
-These operators will be used repeatedly in later sections such as:
-
-- Control Flow
-- Loops
-- Functions
-- Arrays
-- Pointers
-- Data Structures
-- Problem Solving
-- Real-World Projects
-
----
+The `sizeof` operator determines the size of a type or object in bytes. Its result has type `size_t`, which can be displayed using `%zu`.
 
 ## Folder Structure
 
 ```text
 03-operators/
-│
-├── 01-arithmetic-operators/
-│   ├── 01-addition.c
-│   ├── 02-subtraction.c
-│   ├── 03-multiplication.c
-│   ├── 04-division.c
-│   ├── 05-modulus.c
-│   ├── 06-average.c
-│   └── 07-arithmetic-expression.c
-│
-├── 02-relational-operators/
-│   ├── 01-greater-than.c
-│   ├── 02-less-than.c
-│   ├── 03-greater-than-or-equal.c
-│   ├── 04-less-than-or-equal.c
-│   ├── 05-equal-to.c
-│   └── 06-not-equal.c
-│
-├── 03-logical-operators/
-│   ├── 01-logical-and.c
-│   ├── 02-logical-or.c
-│   └── 03-logical-not.c
-│
-├── 04-assignment-operators/
-│   ├── 01-assignment.c
-│   ├── 02-addition-assignment.c
-│   ├── 03-subtraction-assignment.c
-│   ├── 04-multiplication-assignment.c
-│   ├── 05-division-assignment.c
-│   └── 06-modulus-assignment.c
-│
-├── 05-increment-decrement/
-│   ├── 01-increment.c
-│   └── 02-decrement.c
-│
-├── 06-bitwise-operators/
-│   ├── 01-bitwise-and.c
-│   ├── 02-bitwise-or.c
-│   ├── 03-bitwise-xor.c
-│   ├── 04-bitwise-not.c
-│   ├── 05-left-shift.c
-│   └── 06-right-shift.c
-│
-├── 07-sizeof-operator/
-│
+├── 01-arithmetic_operators/
+│   └── README.md
+├── 02-relational_operators/
+│   └── README.md
+├── 03-logical_operators/
+│   └── README.md
+├── 04-assignment_operators/
+│   └── README.md
+├── 05-increment_decrement/
+│   └── README.md
+├── 06-bitwise_operators/
+│   └── README.md
+├── 07-sizeof_operator/
+│   └── README.md
 └── README.md
 ```
 
----
+Each topic folder contains its respective C examples and documentation.
 
-## Section Goal
+## Learning Objectives
 
-The goal of this section is to develop a clear and practical understanding of C operators and expressions.
+After completing this section, learners should be able to:
 
-By completing this section, you should be able to:
+- Perform mathematical calculations using arithmetic operators.
+- Compare values using relational operators.
+- Combine conditions using logical operators.
+- Assign and update variable values.
+- Use increment and decrement operators.
+- Perform basic bitwise operations.
+- Understand operator precedence and expression evaluation.
+- Inspect the storage size of data types and objects using `sizeof`.
 
-- Perform mathematical calculations using arithmetic operators
-- Compare values using relational operators
-- Combine logical expressions
-- Assign and update variable values
-- Increment and decrement values
-- Perform basic bitwise operations
-- Understand operator precedence
-- Inspect the memory size of data types and variables using `sizeof`
+## Purpose
 
-These concepts form an essential foundation for writing structured, reliable, and more complex C programs.
+The goal of this section is to build a strong understanding of C operators and expressions before moving on to control flow, loops, functions, arrays, and more advanced programming concepts.
