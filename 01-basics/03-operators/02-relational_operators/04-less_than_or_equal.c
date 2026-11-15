@@ -5,7 +5,7 @@ int main(void)
     int temperature = 30;
     int maximum_temperature = 30;
 
-    int result = temperature <= maximum_temperature;
+    int result = (temperature <= maximum_temperature);
 
     printf("Relational Operator: <=\n");
     printf("-------------------------\n");

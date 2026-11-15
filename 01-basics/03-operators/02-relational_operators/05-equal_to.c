@@ -5,7 +5,7 @@ int main(void)
     int first_number = 50;
     int second_number = 50;
 
-    int result = first_number == second_number;
+    int result = (first_number == second_number);
 
     printf("Relational Operator: ==\n");
     printf("-------------------------\n");

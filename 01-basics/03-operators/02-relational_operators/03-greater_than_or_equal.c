@@ -5,7 +5,7 @@ int main(void)
     int age = 18;
     int required_age = 18;
 
-    int result = age >= required_age;
+    int result = (age >= required_age);
 
     printf("Relational Operator: >=\n");
     printf("-------------------------\n");
