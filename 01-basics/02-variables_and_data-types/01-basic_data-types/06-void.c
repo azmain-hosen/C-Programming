@@ -4,7 +4,8 @@ void show_message(void)
 {
     printf("I am learning C Programming.\n");
 }
-int main()
+
+int main(void)
 {
     show_message();
 

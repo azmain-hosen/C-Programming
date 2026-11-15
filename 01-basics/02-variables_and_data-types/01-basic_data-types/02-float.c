@@ -1,10 +1,12 @@
 #include <stdio.h>
 
-int main()
+int main(void)
 {
-    float number1;
-    number1 = 2454.5;
-    printf("Your number is : %.2f\n", number1);
+    float number;
+
+    number = 2454.5f;
+
+    printf("Your number is: %.2f\n", number);
 
     return 0;
 }

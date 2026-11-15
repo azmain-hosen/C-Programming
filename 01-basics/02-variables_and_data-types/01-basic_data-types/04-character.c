@@ -1,10 +1,12 @@
 #include <stdio.h>
 
-int main()
+int main(void)
 {
-    char ch;
-    ch = 'A';
-    printf("Your character is : %c\n", ch);
+    char character;
+
+    character = 'A';
+
+    printf("Your character is: %c\n", character);
 
     return 0;
 }

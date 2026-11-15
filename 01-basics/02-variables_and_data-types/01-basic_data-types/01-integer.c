@@ -1,10 +1,12 @@
 #include <stdio.h>
 
-int main()
+int main(void)
 {
-    int number1;
-    number1 = 100;
-    printf("Your number is : %d\n", number1);
+    int number;
+
+    number = 100;
+
+    printf("Your number is: %d\n", number);
 
     return 0;
 }
