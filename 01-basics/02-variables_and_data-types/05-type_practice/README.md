@@ -46,7 +46,7 @@ The program uses these header files:
 ## Folder Structure
 
 ```text
-05-type-practice/
+05-type_practice/
 ├── output/
 ├── 01-student-information.c
 └── README.md
