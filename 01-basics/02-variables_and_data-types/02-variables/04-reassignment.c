@@ -3,11 +3,12 @@
 int main(void)
 {
     int age;
-    age = 18; // assignment
 
-    age = 20; // reassignment
+    age = 18; // Initial assignment
 
-    printf("Age is : %d\n", age);
+    age = 20; // Reassignment
+
+    printf("Age is: %d\n", age);
 
     return 0;
 }
