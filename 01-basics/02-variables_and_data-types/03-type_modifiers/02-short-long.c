@@ -2,15 +2,15 @@
 
 int main(void)
 {
-    short int a = 10;
-    int b = 100;
-    long int c = 2000;
-    long long int d = 20000;
+    short int short_value = 10;
+    int int_value = 100;
+    long int long_value = 2000;
+    long long int long_long_value = 20000;
 
-    printf("Short int for size : %zu bytes\n", sizeof(a));
-    printf("Int for size : %zu bytes\n", sizeof(b));
-    printf("Long int for size : %zu bytes\n", sizeof(c));
-    printf("Long long int for size : %zu bytes\n", sizeof(d));
+    printf("Size of short int      : %zu bytes\n", sizeof(short_value));
+    printf("Size of int            : %zu bytes\n", sizeof(int_value));
+    printf("Size of long int       : %zu bytes\n", sizeof(long_value));
+    printf("Size of long long int  : %zu bytes\n", sizeof(long_long_value));
 
     return 0;
 }

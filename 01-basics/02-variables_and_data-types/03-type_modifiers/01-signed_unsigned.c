@@ -2,13 +2,13 @@
 
 int main(void)
 {
-    signed int a = -45;
-    signed int b = 45;
-    unsigned int c = 43;
+    signed int negative_number = -45;
+    signed int positive_number = 45;
+    unsigned int unsigned_number = 43;
 
-    printf("a = %d\n", a);
-    printf("b = %d\n", b);
-    printf("c = %u\n", c);
+    printf("Signed negative number   : %d\n", negative_number);
+    printf("Signed positive number   : %d\n", positive_number);
+    printf("Unsigned number           : %u\n", unsigned_number);
 
     return 0;
 }
