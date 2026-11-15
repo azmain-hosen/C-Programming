@@ -1,8 +1,15 @@
 #include <stdio.h>
 
-int main()
+int main(void)
 {
-    printf("\n==================================\n\tEscape Sequences\n==================================\n\nName\t: Azmain\nAge\t: 18\n\nPath\t: C:\\Users\\Azmain\\Desktop\n\nMessage : \"Welcome to C Programming\"\n\nGrade\t: \'A\'\n");
+    printf("\n==================================\n"
+           "\tEscape Sequences\n"
+           "==================================\n\n"
+           "Name\t: Alex\n"
+           "Age\t: 18\n\n"
+           "Path\t: C:\\Users\\Alex\\Desktop\n\n"
+           "Message : \"Welcome to C Programming\"\n\n"
+           "Grade\t: \'A\'\n");
 
     return 0;
 }

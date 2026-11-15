@@ -1,7 +1,10 @@
 #include <stdio.h>
 
-int main()
+int main(void)
 {
-    printf("Hello \nWorld!\n");
+    printf("Hello,\n");
+    printf("World!\n");
+    printf("Welcome to C Programming.\n");
+
     return 0;
 }

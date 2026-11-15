@@ -1,8 +1,20 @@
 #include <stdio.h>
 
-int main()
+int main(void)
 {
-    printf("\n==========================\n       C Programming\n==========================\n\nName : Azmain Hosen\nAge : 18\nCountry : Bangladesh\n\nWelcome to C Programming!\n\n");
+    const char name[] = "Alex";
+    const int age = 18;
+    const char grade = 'A';
+    const float score = 95.5f;
+
+    printf("\n==========================\n"
+           "       Student Profile\n"
+           "==========================\n\n");
+
+    printf("Name  : %s\n", name);
+    printf("Age   : %d\n", age);
+    printf("Grade : %c\n", grade);
+    printf("Score : %.2f\n", score);
 
     return 0;
 }

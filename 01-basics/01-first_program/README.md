@@ -1,83 +1,155 @@
 # First Program in C
 
-This folder introduces the very first concepts of C programming. It focuses on basic syntax, the structure of a C program, and how to print output to the console using the standard input/output library.
+This folder introduces the fundamentals of writing and executing C programs. It covers the basic structure of a C program, standard input/output, the `printf()` function, escape sequences, and formatted output.
 
 ## Topics Covered
 
-- Writing a basic C program
-- The main() function
-- The printf() function
-- Including standard headers with stdio.h
-- Escape sequences such as \n
+- Basic structure of a C program
+- The `main()` function
+- The `printf()` function
+- Including standard headers using `stdio.h`
+- Using multiple `printf()` statements
+- Escape sequences
+- Formatted output using format specifiers
+- String literal concatenation
 
 ## Learning Objectives
 
-By the end of this section, you should be able to:
+After completing this section, you should be able to:
 
-- Create and run a simple C program
-- Understand the structure of a C file
-- Print text to the screen
-- Use multiple printf() statements
-- Format output with escape sequences
+- Write and execute a basic C program.
+- Understand the purpose of `#include <stdio.h>`.
+- Understand the role of the `main()` function.
+- Display text using `printf()`.
+- Use multiple `printf()` function calls.
+- Apply common escape sequences.
+- Display variables using format specifiers.
+- Combine adjacent string literals in a `printf()` statement.
 
 ## Files in This Folder
 
-1. 01-hello_world.c
-   - Prints a simple "Hello World" message.
-
-2. 02-multiple_printf.c
-   - Uses multiple printf() calls to display several lines.
-
-3. 03-escape_sequences.c
-   - Demonstrates escape sequences like newline, tabs, and quotes.
-
-4. 04-formatted_output.c
-   - Shows formatted output using placeholders and text formatting.
-
-5. 05-print_practice.c
-   - Practice file for printing custom messages and output patterns.
+| File | Description |
+|---|---|
+| `01-hello_world.c` | Prints the classic Hello World message. |
+| `02-multiple_printf.c` | Demonstrates multiple `printf()` function calls. |
+| `03-escape_sequences.c` | Demonstrates newline, tab, quotation marks, and backslashes. |
+| `04-formatted_output.c` | Demonstrates variables and formatted output using format specifiers. |
+| `05-print_practice.c` | Practices formatted text layouts and adjacent string literals. |
 
 ## Basic C Program Structure
 
 ```c
 #include <stdio.h>
 
-int main() {
+int main(void)
+{
     printf("Hello, World!\n");
+
     return 0;
 }
 ```
 
 ### Explanation
 
-- #include <stdio.h> includes the standard input/output library.
-- int main() is the main function where program execution starts.
-- printf() prints text on the screen.
-- \n moves the cursor to the next line.
-- return 0; indicates the program ended successfully.
+- `#include <stdio.h>` includes the standard input/output header.
+- `int main(void)` defines the main function, where program execution begins.
+- `printf()` displays output on the screen.
+- `\n` moves the cursor to the next line.
+- `return 0;` indicates successful program termination.
+
+## Escape Sequences
+
+Escape sequences are special character combinations used inside string literals.
+
+| Escape Sequence | Description |
+|---|---|
+| `\n` | Newline |
+| `\t` | Horizontal tab |
+| `\\` | Backslash |
+| `\"` | Double quotation mark |
+| `\'` | Single quotation mark |
+
+## Formatted Output
+
+The `printf()` function supports format specifiers to display different types of values.
+
+| Format Specifier | Data Type / Purpose |
+|---|---|
+| `%d` | Integer |
+| `%f` | Floating-point number |
+| `%.2f` | Floating-point number with two digits after the decimal point |
+| `%c` | Character |
+| `%s` | String |
+| `%lld` | Long long integer |
+
+Example:
+
+```c
+#include <stdio.h>
+
+int main(void)
+{
+    int age = 18;
+    float score = 95.5f;
+    char grade = 'A';
+    char name[] = "Alex";
+
+    printf("Name  : %s\n", name);
+    printf("Age   : %d\n", age);
+    printf("Score : %.2f\n", score);
+    printf("Grade : %c\n", grade);
+
+    return 0;
+}
+```
+
+## Adjacent String Literals
+
+In C, consecutive string literals are automatically concatenated during compilation.
+
+Example:
+
+```c
+printf("Hello, "
+       "World!\n");
+```
+
+Output:
+
+```text
+Hello, World!
+```
+
+This technique helps organize long strings across multiple source-code lines.
 
 ## How to Compile and Run
 
-Open a terminal in this folder and run:
+Make sure you are inside this folder and that the `output` directory exists.
+
+Compile:
 
 ```bash
-gcc 01-hello_world.c -o hello
-./hello
+gcc -std=c17 -Wall -Wextra -Wpedantic 01-hello_world.c -o output/01-hello_world
 ```
 
-Replace 01-hello_world.c with any file name you want to compile.
+Run:
+
+```bash
+./output/01-hello_world
+```
+
+Replace the source filename and executable name to compile another program.
 
 ## Practice Ideas
 
-- Print your name and address
-- Display multiple lines using printf()
-- Use different escape sequences like \t, \n, and \"
-- Create a small output pattern using repeated printf() statements
-
-## Notes
-
-This is the foundation of C programming. Once you understand how output works, you can move to variables, operators, control flow, loops, and more advanced topics.
+1. Print your name, age, and country.
+2. Display multiple lines using separate `printf()` calls.
+3. Practice different escape sequences.
+4. Create a formatted student profile using variables.
+5. Print a structured text layout using adjacent string literals.
 
 ## Summary
 
-This section builds the basic understanding required for every C program: include headers, define main(), and print output using printf().
+This section establishes the foundation of C programming. It introduces the basic program structure, output operations, escape sequences, and formatted output.
+
+These concepts will be used throughout the rest of the C programming journey.
