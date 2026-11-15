@@ -2,16 +2,26 @@
 
 int main(void)
 {
-    int num1, num2, product;
+    int num1, num2;
+    long long product;
 
-    printf("Enter first number : ");
-    scanf("%d", &num1);
+    printf("Enter first number: ");
+    if (scanf("%d", &num1) != 1)
+    {
+        fprintf(stderr, "Error: Please enter a valid integer.\n");
+        return 1;
+    }
 
-    printf("Enter second number : ");
-    scanf("%d", &num2);
+    printf("Enter second number: ");
+    if (scanf("%d", &num2) != 1)
+    {
+        fprintf(stderr, "Error: Please enter a valid integer.\n");
+        return 1;
+    }
 
-    product = num1 * num2;
-    printf("\nThe multiplication is : %d\n", product);
+    product = (long long)num1 * num2;
+
+    printf("\nThe product is: %lld\n", product);
 
     return 0;
 }

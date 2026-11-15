@@ -2,18 +2,26 @@
 
 int main(void)
 {
-    int num1, num2, sum;
-    float  average;
+    int num1, num2;
+    double average;
 
-    printf("Enter first number : ");
-    scanf("%d", &num1);
+    printf("Enter first number: ");
+    if (scanf("%d", &num1) != 1)
+    {
+        fprintf(stderr, "Error: Please enter a valid integer.\n");
+        return 1;
+    }
 
-    printf("Enter second number : ");
-    scanf("%d", &num2);
+    printf("Enter second number: ");
+    if (scanf("%d", &num2) != 1)
+    {
+        fprintf(stderr, "Error: Please enter a valid integer.\n");
+        return 1;
+    }
 
-    sum = num1 + num2;
-    average = (float)sum / 2; // type casting
-    printf("The average is : %.1f\n", average);
+    average = ((double)num1 + (double)num2) / 2.0;
+
+    printf("The average is: %.2f\n", average);
 
     return 0;
 }

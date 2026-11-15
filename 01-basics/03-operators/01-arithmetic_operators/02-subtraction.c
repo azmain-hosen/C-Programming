@@ -2,16 +2,26 @@
 
 int main(void)
 {
-    int num1, num2, difference;
+    int num1, num2;
+    long long difference;
 
-    printf("Enter first number : ");
-    scanf("%d", &num1);
+    printf("Enter first number: ");
+    if (scanf("%d", &num1) != 1)
+    {
+        fprintf(stderr, "Error: Please enter a valid integer.\n");
+        return 1;
+    }
 
-    printf("Enter second number : ");
-    scanf("%d", &num2);
+    printf("Enter second number: ");
+    if (scanf("%d", &num2) != 1)
+    {
+        fprintf(stderr, "Error: Please enter a valid integer.\n");
+        return 1;
+    }
 
-    difference = num1 - num2;
-    printf("\nThe subtraction is : %d\n", difference);
+    difference = (long long)num1 - num2;
+
+    printf("\nThe difference is: %lld\n", difference);
 
     return 0;
 }

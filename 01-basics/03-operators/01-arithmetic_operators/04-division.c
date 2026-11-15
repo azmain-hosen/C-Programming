@@ -1,23 +1,32 @@
 #include <stdio.h>
 
-int main()
+int main(void)
 {
-    double num1, num2, division;
+    double num1, num2, quotient;
 
-    printf("Enter first number : ");
-    scanf("%lf", &num1);
-
-    printf("Enter second number : ");
-    scanf("%lf", &num2);
-
-    if (num2 == 0)
+    printf("Enter first number: ");
+    if (scanf("%lf", &num1) != 1)
     {
-        printf("Error: Cannot divide by zero.\n");
+        fprintf(stderr, "Error: Please enter a valid number.\n");
         return 1;
     }
 
-    division = num1 / num2;
-    printf("\nThe division is : %.2lf\n", division);
+    printf("Enter second number: ");
+    if (scanf("%lf", &num2) != 1)
+    {
+        fprintf(stderr, "Error: Please enter a valid number.\n");
+        return 1;
+    }
+
+    if (num2 == 0.0)
+    {
+        fprintf(stderr, "Error: Cannot divide by zero.\n");
+        return 1;
+    }
+
+    quotient = num1 / num2;
+
+    printf("\nThe quotient is: %.2f\n", quotient);
 
     return 0;
 }
