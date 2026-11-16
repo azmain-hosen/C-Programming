@@ -5,7 +5,7 @@ int main(void)
     int age = 10;
     int has_id = 1;
 
-    int result = age >= 18 && has_id;
+    int result = (age >= 18) && (has_id != 0);
 
     printf("Logical Operator: &&\n");
     printf("----------------------\n");

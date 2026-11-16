@@ -5,7 +5,7 @@ int main(void)
     int is_student = 1;
     int is_employee = 0;
 
-    int result = is_student || is_employee;
+    int result = (is_student != 0) || (is_employee != 0);
 
     printf("Logical Operator: ||\n");
     printf("----------------------\n");
